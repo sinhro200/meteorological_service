@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController
 class TestController(
         @Autowired private val dsl: DSLContext) {
 
-    private val weatherTable = Weather.WEATHER
-    private val locationTable = Location.LOCATION
     private val administrativeAreaTable = AdministrativeArea.ADMINISTRATIVE_AREA
 
     @GetMapping("/test")
