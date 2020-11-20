@@ -1,5 +1,6 @@
 package com.sinhro.meteorological_service.config
 
+import com.sinhro.meteorological_service.service.AdministrativeAreaService
 import com.sinhro.meteorological_service.service.AdministrativeAreaTypeService
 import com.sinhro.meteorological_service.service.SourceService
 import org.jooq.DSLContext
@@ -21,5 +22,10 @@ class DataServicesConfiguration(
     @Bean
     fun sourceService(): SourceService {
         return SourceService(dslContext)
+    }
+
+    @Bean
+    fun administrativeAreaService(): AdministrativeAreaService {
+        return AdministrativeAreaService(dslContext)
     }
 }
